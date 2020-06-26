@@ -4,9 +4,14 @@
 }
 
 .carousel-container {
+  overflow: hidden;
 }
 
 .carouselImages {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+  margin: 0;
 }
 
 ul {
@@ -20,7 +25,14 @@ li {
 
 .carousel__photo {
   width: 100%;
-  height: 50vh;
   object-fit: cover;
   transition: transform 0.2s;
+}
+
+.row {
+  display: flex;
+}
+
+.col1 {
+  flex-basis: 75%;
 }
