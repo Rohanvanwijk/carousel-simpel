@@ -1,38 +1,36 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+}
+
 .container {
   max-width: 800px;
   margin: auto;
-}
-
-.carousel-container {
-  overflow: hidden;
-}
-
-.carouselImages {
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s;
-  margin: 0;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  overflow: hidden;
+  position: relative;
 }
 
 .carousel__photo {
   width: 100%;
-  object-fit: cover;
-  transition: transform 0.2s;
+  display: none;
 }
 
-.row {
-  display: flex;
+.active {
+  display: block;
 }
 
-.col1 {
-  flex-basis: 75%;
+.button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button__next {
+  right: 0;
 }

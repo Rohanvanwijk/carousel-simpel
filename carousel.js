@@ -1,24 +1,43 @@
-const carousel = document.querySelector(".carouselImages");
-const carouselImages = document.querySelectorAll(".carouselImages img");
-const active = document.querySelector("#JS-active");
+const carouselSlides = document.querySelector(".carousel").children;
+const totalSlides = carouselSlides.length;
 // Buttons
 const btnNext = document.querySelector(".JS-next");
 const btnPrev = document.querySelector(".JS-prev");
 
-// Counter
-let counter = 1;
+var currentSlide = 0;
 
 // Button listeners
 btnNext.addEventListener("click", () => {
-  if (counter == carouselImages.length) {
-    counter = 0;
-  }
-  const size = carouselImages[counter].height;
-  carousel.style.transform = `translateY(${-size * counter}px)`;
-
-  counter++;
-  console.log(size);
+  moveSlide(true);
 });
 
-console.log(carousel);
-console.log(carouselImages);
+btnPrev.addEventListener("click", () => {
+  moveSlide(false);
+});
+
+function moveSlide(forward) {
+  if (forward) {
+    currentSlide++;
+    if (currentSlide == totalSlides) {
+      currentSlide = 0;
+    }
+  } else {
+    currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = totalSlides - 1;
+    }
+  }
+  console.log(currentSlide);
+  removeActiveClass("active");
+  setActiveClass("active", currentSlide);
+}
+
+function removeActiveClass(className) {
+  for (i = 0; i < totalSlides; i++) {
+    carouselSlides[i].classList.remove(className);
+  }
+}
+
+function setActiveClass(className, slide) {
+  carouselSlides[slide].classList.add(className);
+}
