@@ -10,72 +10,34 @@
   <body>
     <div class="container">
       <h1 class="title">Overveen en omgeving</h1>
-      <div class="carousel">
-        <img
-          class="carousel__photo active"
-          src="assets/overveen-overveen-37_1.jpg"
-          alt="Audi RS6"
-        />
-        <img
-          class="carousel__photo"
-          src="assets/overveen-overveen-40_2.jpg"
-          alt="BMW M5"
-        />
-        <img
-          class="carousel__photo"
-          src="assets/overveen-overveen-42_3.jpg"
-          alt="Mercedes AMG E63S 2017"
-        />
-        <img
-          class="carousel__photo"
-          src="assets/overveen-overveen-48_4.jpg"
-          alt="Mercedes AMG E63S 2017"
-        />
-        <img
-          class="carousel__photo"
-          src="assets/overveen-overveen-51_5.jpg"
-          alt="Mercedes AMG E63S 2017"
-        />
+      <p>All images where taken with the Canon PowerShot G3. This camera was released in 2002 and has 4 megapixels.</p>
+      <hr>
+      <div class="thumbnails">
+        <div class="thumbnail-image">
+          <img src="assets/overveen-overveen-37_1.jpg" class="image">
+        </div>
+        <div class="thumbnail-image">
+          <img src="assets/overveen-overveen-40_2.jpg" class="image">
+        </div>
+        <div class="thumbnail-image">
+          <img src="assets/overveen-overveen-42_3.jpg" class="image">
+        </div>
+        <div class="thumbnail-image">
+          <img src="assets/overveen-overveen-48_4.jpg" class="image">
+        </div>
+        <div class="thumbnail-image">
+          <img src="assets/overveen-overveen-51_5.jpg" class="image">
+        </div>
       </div>
-      <div class="button button__next JS-next">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          width="60px"
-          height="80px"
-          viewBox="0 0 50 80"
-          xml:space="preserve"
-        >
-          <polyline
-            fill="none"
-            stroke="#FFFFFF"
-            stroke-width="1"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            points="
-        0.375,0.375 45.63,38.087 0.375,75.8 "
-          />
-        </svg>
+      <div class="modal JS-modal">
+        <div class="modal-image-container">
+          <img src="">
+          <div class="button button__next JS-next">></div>
+          <div class="button button__prev JS-prev"><</div>
+        </div>
+        <div class="close JS-close"></div>
       </div>
-      <div class="button JS-prev">
-        <svg
-          width="60px"
-          height="80px"
-          viewBox="0 0 50 80"
-          xml:space="preserve"
-        >
-          <polyline
-            fill="none"
-            stroke="#FFFFFF"
-            stroke-width="1"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            points="
-          45.63,75.8 0.375,38.087 45.63,0.375 "
-          />
-        </svg>
-      </div>
-    </div>
     <script src="carousel.js"></script>
+  </div>
   </body>
 </html>
